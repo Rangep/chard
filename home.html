@@ -1,83 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
+
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="Stylesheet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Bootstrap demo</title>
-  </head>
-  <body class="text-bg-secondary p-3">
-    <div class="card text-center">
-        <div class="card-header" >
-          <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="true" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Signup</a>
-            </li>
-          </ul>
-        </div>
-        <div class="card-body">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd_UQohOkLafvY1AkcTqXPhae34T1QZKks4w&s" class="rounded mx-auto d-block" alt="...">
-          <h5 class="card-title">R-Shop</h5>
-          <p class="card-text">Enjoy shopping.</p>
-          <a href="#" class="btn btn-primary">Start</a>
-        </div>
+    <title>Bootstrap Demo</title>
+</head>
 
-        <div class="about-us">
-            <h2 class="info">Contact Us</h2>
-            <p>If you need to contact us for any other matters, please use the following contact channels:</p>>
-            <ul>
-                <li class="text">
-                    <p class="nav-fw" aria-current="true" >For security incidents, email security@survicate.com.</p>
-                    </li>
-                    <li class="nav-link">
-                        <p class="nav-fw" aria-current="true" >Survicate has appointed a Data Protection Officer, Rudi Kosiór. If you have questions or concerns regarding data protection or compliance with privacy 
-                            regulations, please don't hesitate to reach out to him by sending an email to gdpr@survicate.com.</p>
-                        </li>
-                        <li class="text">
-                            <p class="nav-fw" aria-current="true" >If you have issues or complaints with service quality, billing, invoicing, or concerns about our policies, please reach out to us anytime through the "send us a message" button inside the Survicate product or send an email to support@survicate.com.</p>
-                            </li>
-                            <li class="text">
-                                <p class="nav-fw" aria-current="true" >For any complaints (e.g. related to sustainability, human rights, or environmental law), please send an email to  complaints@survicate.com.</p>
-                                </li>
-                </ul>
-            </div>
-            <div class="table">
-                <table class="table">
-                      <tr>
-                       
-                        <th scope="col">Email</th>
-                        <th scope="col">Contact No.</th>
-                        <th scope="col">Address</th>
-                      </tr>
-                    <tbody class="table-group-divider">
-                      <tr>
-                       
-                        <td>miguelangela13@gmail.com</td>
-                        <td>09132857454</td>
-                        <td>Mabalacat city</td>
-                      </tr>
-                      <tr>
-                        
-                        <td>Raizen13@gmail.com</td>
-                        <td>0913221257454</td>
-                        <td>Sapang bato</td>
-                      </tr>
-                      <tr>
-                    
-                        <td>Jordan13@gmail.com</td>
-                        <td>09132854141</td>
-                        <td>Angeles City</td>
-                      </tr>
-                  </table>
-
+<body>
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="home.html">
+                <span style="color: rgb(9, 138, 105); font-size: 24px;">PI</span>OT
+            </a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><span style="color: rgb(9, 138, 105); font-size: 24px;">PI</span>OT</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-      </div>
-  </body>
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item"></li>
+                        <a class="nav-link mx-lg-2 active" href="#">About</a>
+                        </li>
+                        <li class="nav-item"></li>
+                        <a class="nav-link mx-lg-2 active" href="#">Contact</a>
+                        </li>
+                </div>
+            </div>
+            <a href="#" class="login-button">Login</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        </div>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="farm.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption ">
+                    <h5>It takes a great</h5>
+                    <p>cook to pull life truth from poultry.</p>
+                    <p><a href="#" class="btn btn-info mt-3">Learn More</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="im.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption ">
+                    <h5>Wise man </h5>
+                    <p>is the rooster of the universe: He awakens the unawake!.</p>
+                    <p><a href="#" class="btn btn-info mt-3">Learn More</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="poo.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption ">
+                    <h5>To get a better</h5>
+                    <p>piece of chicken, you'd have to be a rooster</p>
+                    <p><a href="#" class="btn btn-info mt-3">Learn More</a></p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <section id="about" class="about-section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-img">
+                        <img src="wer.jpeg" class="large-img d-block w-100" alt="...">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text">
+                        <h2>We Provide Best Quality</h2>
+                        <p>For a slim, sexy body, it's important to eat protein every day - preferably at every meal. Be sure to ask about the origins of your meat, poultry and seafood. If you can't afford organic, free-range meats, opt for natural poultry,
+                            pork, and beef that's raised without antibiotics or hormones.</p>
+                        <a href="#" class="btn btn-info">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our Services</h2>
+                        <p>Our comprehensive poultry services offer advanced health monitoring, disease prediction, <br>and expert care recommendations, ensuring the optimal well-being and productivity<br> of your flock.</p>
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-4">
+                                <div class="card text-white text-center bg-dark pb-2">
+                                    <div class="card-body">
+                                        <i class="bi bi-subtract"></i>
+                                        <h3 class="card-title">Best Quality</h3>
+                                        <p class="lead">We are committed to delivering the best quality poultry through rigorous health monitoring, superior nutritional practices, and expert care, ensuring that your flock thrives and provides the highest yield.</p>
+                                        <button class="btn btn-info text-dark">Read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-4">
+                                <div class="card text-white text-center bg-dark pb-2">
+                                    <div class="card-body">
+                                        <i class="bi bi-sun"></i>
+                                        <h3 class="card-title">Nutritional Support</h3>
+                                        <p class="lead">Our nutritional support services provide tailored feeding programs designed to meet the specific dietary needs of your poultry, promoting optimal growth, health, and productivity.</p>
+                                        <button class="btn btn-info text-dark">Read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12 col-lg-4">
+                                <div class="card text-white text-center bg-dark pb-2">
+                                    <div class="card-body">
+                                        <i class="bi bi-virus2"></i>
+                                        <h3 class="card-title">Disease Prevention</h3>
+                                        <p class="lead">Our disease prevention strategies focus on proactive health monitoring and biosecurity measures, ensuring your flock remains healthy and protected from potential outbreaks.</p>
+                                        <button class="btn btn-info text-dark">Read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our Projects</h2>
+                        <p>We are developing an innovative IoT-based system designed to predict poultry diseases, utilizing data-driven <br>insights to enhance flock health and optimize management strategies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center bg-white pb-2">
+                        <div class="img-area mb-4">
+                            <img src="aa.jpeg" alt="Health Forecasting" class="img-fluid">
+                        </div>
+                        <h3 class="card-title">Health Forecasting</h3>
+                        <p class="lead">Utilizing advanced IoT technology, our health monitoring services track vital signs and environmental conditions in real-time, enabling early detection of health issues.</p>
+                        <button class="btn btn-info">Learn more</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center bg-white pb-2">
+                        <div class="img-area mb-4">
+                            <img src="aaa.jpeg" alt="Predictive Analytics" class="img-fluid">
+                        </div>
+                        <h3 class="card-title">Predictive Analytics</h3>
+                        <p class="lead">Our predictive analytics leverage cutting-edge technology to identify potential health risks, allowing for timely interventions to reduce the likelihood of outbreaks.</p>
+                        <button class="btn btn-info">Learn more</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center bg-white pb-2">
+                        <div class="img-area mb-4">
+                            <img src="aa.jpeg" alt="Data-Driven Insights" class="img-fluid">
+                        </div>
+                        <h3 class="card-title">Data-Driven Insights</h3>
+                        <p class="lead">Data-driven insights empower poultry producers to enhance flock health and optimize management practices through real-time data analysis.</p>
+                        <button class="btn btn-info">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="team" class="team section-padding">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Contact</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="download.png" alt="" class="img-fluid rounded-circle">
+                            <h3 class="card-title py-2">Richard Francisco</h3>
+                            <p>Our innovative project focuses on enhancing poultry health through advanced monitoring systems, predictive analytics, and tailored care solutions, ensuring optimal management and productivity for farmers.</p>
+
+                            <p class="socials">
+                                <i class="bi bi-twitter text-dark mx-1"></i>
+                                <i class="bi bi-facebook text-dark mx-1"></i>
+                                <i class="bi bi-instagram text-dark mx-1"></i>
+                                <i class="bi bi-snapchat text-dark mx-1"></i>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
 </html>
